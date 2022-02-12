@@ -1,0 +1,38 @@
+{
+	"name": "fls-gulp",
+	"version": "1.0.0",
+	"description": "My gulp",
+	"main": "index.html",
+	"homepage": "https://sistle.github.io/oil-portfolio",
+	"author": "Fls",
+	"license": "ISC",
+	"scripts": {
+		"deploy": "gh-pages -d dist"
+	},
+	"devDependencies": {
+		"browser-sync": "latest",
+		"del": "latest",
+		"gh-pages": "^3.2.3",
+		"gulp": "latest",
+		"gulp-autoprefixer": "latest",
+		"gulp-clean-css": "latest",
+		"gulp-file-include": "latest",
+		"gulp-fonter": "latest",
+		"gulp-group-css-media-queries": "latest",
+		"gulp-imagemin": "7.1.0",
+		"gulp-newer": "latest",
+		"gulp-plumber": "latest",
+		"gulp-rename": "latest",
+		"gulp-sass": "latest",
+		"gulp-svg-sprite": "latest",
+		"gulp-ttf2woff": "latest",
+		"gulp-ttf2woff2": "latest",
+		"gulp-uglify-es": "latest",
+		"gulp-webp-html": "latest",
+		"gulp-webpcss": "latest",
+		"imagemin-webp": "6.0.0",
+		"sass": "latest",
+		"transform-runtime": "0.0.0",
+		"webp-converter": "2.2.3"
+	}
+}

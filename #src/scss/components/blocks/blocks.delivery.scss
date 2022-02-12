@@ -1,0 +1,150 @@
+.delivery {
+	&__inner {
+		margin-bottom: rem(80px);
+		
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: rem(30px);
+
+		position: relative;
+		&:not(:last-child) {
+			margin-bottom: rem(40px);
+		}
+	}
+
+	&__item_bottom {
+		flex-direction: row-reverse;
+	}
+
+	&__inform {
+		display: flex;
+		gap: rem(64px);
+		background-color: #edf4d2;
+	}
+
+	&__inform_delivery {
+		padding: rem(24px) rem(24px) rem(24px) rem(212px);
+	}
+
+	&__inform_payment {
+		padding: rem(24px) rem(212px) rem(24px) rem(24px);
+	}
+
+	&__type {
+		text-align: center;
+	}
+
+	&__img {
+		font-size: rem(55px);
+		color: $green;
+		display: block;
+		margin-bottom: rem(14px);
+	}
+	&__logo {
+		max-width: 100%;
+		height: auto;
+		object-fit: cover;
+	}
+
+	&__logo-top,
+	&__logo-bottom {
+		position: absolute;
+		z-index: 2;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	&__logo-top {
+		right: 0px;
+		bottom: rem(-20px);
+	}
+	&__logo-bottom {
+		left: rem(-10px);
+		top: rem(-10px);
+	}
+}
+@media (max-width: $md2) {
+	.delivery {
+		&__item {
+			gap: rem(15px);
+		}
+		&__inform {
+			display: flex;
+			flex-wrap: wrap;
+			gap: rem(64px);
+			background-color: #edf4d2;
+		}
+		&__img {
+			font-size: rem(40px);
+		}
+	}
+}
+@media (max-width: $md3) {
+	.delivery {
+		&__inform {
+			padding: rem(24px);
+		}
+		&__logo-top {
+			right: 0px;
+			bottom: rem(10px);
+			width: 100%;
+			max-width: rem(130px);
+		}
+		&__logo-bottom {
+			left: rem(-10px);
+			top: rem(20px);
+			width: 100%;
+			max-width: rem(151px);
+		}
+	}
+}
+@media (max-width: $md4) {
+	.delivery {
+		&__inner {
+		margin-bottom: rem(50px);
+	}
+		&__item {
+			flex-direction: column;
+			gap: rem(15px);
+			position: static;
+		}
+		&__inform {
+			order: 1;
+			width: 100%;
+			justify-content: center;
+		}
+		&__header {
+			position: relative;
+		}
+
+		&__logo-top {
+			right:-100px;
+			top: -15px;
+			width: 100%;
+			max-width: rem(100px);
+		}
+		&__logo-bottom {
+			left: -110px;
+			top: rem(20px);
+			width: 100%;
+			max-width: rem(151px);
+		}
+	}
+}
+@media (max-width: $md5) {
+	.delivery {
+		&__inform {
+			gap: rem(10px);
+			padding: rem(14px);
+		}
+		&__img {
+			font-size: rem(45px);
+		}
+		&__type {
+			flex: 0 1 calc(33% - 10px);
+		}
+	}
+}

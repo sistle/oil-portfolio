@@ -1,0 +1,28 @@
+//<Input >====================================================================================================
+.input {
+	border-radius: 0 !important;
+	width: 100%;
+	display: block;
+	padding: 0px 20px;
+	&__focus {
+	}
+	&__error {
+	}
+}
+.textarea {
+	resize: none;
+	padding: rem(9px) rem(16px);
+}
+.input,
+.textarea {
+	@media (any-hover: hover) {
+		&:hover {
+			border-color: $orange;
+		}
+	}
+	&::placeholder {
+		color: #bfbfbf;
+		font-size: 14px;
+	}
+}
+//</Input >====================================================================================================

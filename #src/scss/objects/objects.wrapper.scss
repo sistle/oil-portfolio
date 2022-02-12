@@ -1,0 +1,11 @@
+.wrapper {
+	width: 100%;
+	min-height: 100vh;
+	overflow: hidden;
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+
+	&.loaded {
+	}
+}

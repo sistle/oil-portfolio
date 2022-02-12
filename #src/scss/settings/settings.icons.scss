@@ -1,0 +1,62 @@
+[class^="icon__"],
+[class*=" icon__"] {
+	&:before {
+		@extend %icons;
+		display: block;
+	}
+}
+
+.icon__arrow-left:before {
+	content: "\e900";
+}
+.icon__arrow-right:before {
+	content: "\e901";
+}
+.icon__car:before {
+	content: "\e902";
+}
+.icon__cart:before {
+	content: "\e903";
+}
+.icon__close:before {
+	content: "\e904";
+}
+.icon__coins:before {
+	content: "\e905";
+}
+.icon__credit-card:before {
+	content: "\e906";
+}
+.icon__facebook:before {
+	content: "\e907";
+}
+.icon__footer-logo:before {
+	content: "\e908";
+}
+.icon__hand:before {
+	content: "\e909";
+}
+.icon__instagram:before {
+	content: "\e90a";
+}
+.icon__mail:before {
+	content: "\e90b";
+}
+.icon__minus:before {
+	content: "\e90c";
+}
+.icon__phone:before {
+	content: "\e90d";
+}
+.icon__plus:before {
+	content: "\e90e";
+}
+.icon__shop:before {
+	content: "\e90f";
+}
+.icon__telegram:before {
+	content: "\e910";
+}
+.icon__viber:before {
+	content: "\e911";
+}

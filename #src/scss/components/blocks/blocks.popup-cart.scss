@@ -1,0 +1,177 @@
+.cart {
+	
+	&__header {
+		margin-bottom: rem(16px);
+	}
+
+	&__title {
+		font-family: "Asmatic";
+		font-size: rem(32px);
+	}
+
+	&__btn-close {
+		position: sticky;
+		top: 0;
+		left: 100%;
+		margin: 0 rem(-35px);
+		color: $green;
+		font-size: rem(30px);
+	}
+	&__footer {
+		text-align: center;
+	}
+	&__desc {
+		font-size: rem(19px);
+		margin-bottom: rem(10px);
+	}
+	&__total {
+		font-family: "Roboto";
+		margin-bottom: rem(10px);
+		color: $green;
+		font-weight: bold;
+		letter-spacing: normal;
+	}
+	&__forms{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: rem(20px);
+		margin-right: rem(-20px);
+	}
+	&__btn-remove,
+	&__btn-send {
+		color: #949494;
+		border: 1px solid;
+		padding: rem(8px) rem(14px);
+		width: 100%;
+		max-width: rem(360px);
+		font-weight: normal;
+		font-size: rem(20px);
+		color:$green;
+
+	}
+	&__main{
+		text-align: center;
+		margin-bottom: rem(20px);
+	}
+}
+.cart-item {
+	background: #e4ebcef1;
+	padding: rem(12px) rem(40px);
+	margin-bottom: rem(10px);
+	&__top {
+		display: flex;
+		justify-content: center;
+		gap: rem(16px);
+		margin-bottom: 7px;
+	}
+
+	&__caption {
+		color: $green;
+	}
+
+	&__content {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__box {
+		border: 1px solid $green;
+		padding: rem(5px) rem(40px);
+		background-color: #fff;
+	}
+
+	&__img {
+		height: 60px;
+		max-width: 100%;
+		object-fit: cover;
+	}
+
+	&__actions {
+		display: flex;
+		align-items: center;
+		gap: rem(32px);
+	}
+
+	&__quantity {
+		font-weight: 500;
+		display: flex;
+		align-items: center;
+		gap: rem(10px);
+		padding: rem(10px);
+	}
+	&__decrease,
+	&__increase {
+		border: 1px solid;
+		border-radius: rem(8px);
+		background-color: #fff;
+		width: rem(32px);
+		height: rem(32px);
+		color: #4a4a4a;
+	}
+	&__increase {
+		font-size: rem(17px);
+	}
+	&__decrease {
+		font-size: rem(7px);
+	}
+	&__price,
+	&__quantity {
+		color: $green;
+		font-size: rem(24px);
+	}
+
+	&__btn {
+		font-size: rem(25px);
+	}
+}
+@media (max-width: $md3) {
+	.cart {
+		&__inner {
+			max-width: 90%;
+		}
+	}
+}
+@media (max-width: $md4) {
+	.cart {
+		&__inner {
+			max-width: 90%;
+			padding: rem(18px) rem(33px) rem(18px) rem(13px);
+		}
+		&__btn-close {
+			position: sticky;
+			top: 0;
+			left: 100%;
+
+			color: $green;
+			font-size: rem(30px);
+		}
+	}
+}
+@media (max-width: 500px) {
+	.cart-item {
+		padding: rem(12px);
+		&__actions {
+			gap: rem(18px);
+		}
+		&__box {
+			padding: rem(5px) rem(20px);
+		}
+		&__decrease,
+		&__increase {
+			width: rem(18px);
+			height: rem(18px);
+		}
+		&__increase {
+			font-size: rem(10px);
+		}
+		&__decrease {
+			font-size: rem(6px);
+		}
+		&__price,
+		&__quantity {
+			font-size: rem(19px);
+		}
+	}
+}

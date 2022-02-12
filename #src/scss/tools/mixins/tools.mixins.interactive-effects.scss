@@ -1,0 +1,31 @@
+@mixin interactive-effects($color, $state) {
+	@if $state == background {
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: darken($color, 10%);
+			}
+		}
+
+		&:focus {
+			background-color: darken($color, 15%);
+		}
+
+		&:active {
+			background-color: darken($color, 25%);
+		}
+	} @else if $state == color {
+		@media (any-hover: hover) {
+			&:hover {
+				color: darken($color, 10%);
+			}
+		}
+
+		&:focus {
+			color: darken($color, 15%);
+		}
+
+		&:active {
+			color: darken($color, 25%);
+		}
+	}
+}

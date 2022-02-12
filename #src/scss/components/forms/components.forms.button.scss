@@ -1,0 +1,86 @@
+//<BUTTONS >====================================================================================================
+.btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+
+	font-family: inherit;
+	text-align: center;
+
+	color: inherit;
+	outline: none;
+	border: 1px solid;
+	padding: rem(16px) rem(15px);
+	border-radius: rem(50px);
+	font-weight: 500;
+	text-transform: uppercase;
+	transition: color 0.3s ease;
+
+	&[disabled] {
+		cursor: not-allowed;
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			color: $orange;
+		}
+	}
+	&--close {
+		@media (any-hover: hover) {
+			&:hover,
+			&:focus {
+				color: $darkRed;
+			}
+		}
+	}
+	&--green {
+		color: $green;
+		border-color: $lightGreen;
+
+		@media (any-hover: hover) {
+			&:hover,
+			&:focus {
+				color: #fff;
+				background: $bgGreen;
+			}
+		}
+	}
+	&--azul {
+		color: $azul;
+		border-color: $lightAzul;
+
+		@media (any-hover: hover) {
+			&:hover,
+			&:focus {
+				color: #fff;
+				background: $bgAzul;
+			}
+		}
+	}
+	&--red {
+		color: $red;
+		border-color: $lightRed;
+
+		@media (any-hover: hover) {
+			&:hover,
+			&:focus {
+				color: #fff;
+				background: $bgRed;
+			}
+		}
+	}
+
+	&--orange {
+		color: $orange;
+		border-color: $lightOrange;
+
+		@media (any-hover: hover) {
+			&:hover,
+			&:focus {
+				color: #fff;
+				background: $bgOrange;
+			}
+		}
+	}
+}
+
+//</BUTTONS>====================================================================================================

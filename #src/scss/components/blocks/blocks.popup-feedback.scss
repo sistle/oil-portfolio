@@ -1,0 +1,99 @@
+.feedback {
+	
+	&__inner {
+		width: 100%;
+		max-width: rem(600px);
+		padding: rem(56px);
+		
+	}
+	&__header {
+		margin-bottom: rem(24px);
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__title {
+		font-family: "Asmatic";
+		font-size: rem(36px);
+	}
+	&__btn-capture {
+		font-size: rem(14px);
+		font-weight: 400;
+	}
+
+	&__forms-item {
+		display: flex;
+		flex-direction: column;
+		gap: rem(10px);
+		&:not(:last-child) {
+			margin-bottom: rem(27px);
+		}
+	}
+	&__forms-item--actions {
+		position: relative;
+	}
+	&__input,
+	&__textaera {
+		padding: rem(10px) rem(19px);
+		border: 1px solid #d6d6d6;
+	}
+	&__textaera {
+		height: rem(165px);
+		overflow-y: auto;
+	}
+	&__btn {
+		width: 100%;
+		max-width: rem(234px);
+		margin: 0 auto;
+		color:$green;
+	}
+
+	&__img-wrapper {
+		position: absolute;
+		top: rem(-40px);
+		left: rem(-20px);
+	}
+	&__img {
+		max-width: 100%;
+		height: auto;
+	}
+}
+@media (max-width: 520px) {
+	.feedback {
+		&__inner {
+			max-width: rem(460px);
+			padding: rem(16px);
+		}
+		&__img-wrapper {
+			position: static;
+			margin: 0 auto;
+		}
+		&__header {
+			margin-bottom: rem(14px);
+		}
+		&__textaera {
+			height: rem(115px);
+		}
+	}
+}
+@media (max-width: $md4) {
+	.feedback {
+		&__img-wrapper {
+			top: rem(-20px);
+			left: rem(0px);
+		}
+		&__img {
+			max-width: rem(120px);
+		}
+	}
+}
+@media (max-width: 420px) {
+	.feedback {
+		&__inner {
+			width: 100%;
+			max-width: rem(360px);
+			padding: rem(10px) rem(12px);
+		}
+	}
+}

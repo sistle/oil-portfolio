@@ -1,0 +1,27 @@
+.reviews {
+	&__inner{
+		margin-bottom: rem(80px);
+	}
+	&__title {
+		margin-bottom: rem(40px);
+	}
+
+
+	&__item {
+		display: flex;
+		justify-content: center;
+	}
+
+	&__img {
+		max-width: 100%;
+		height: auto;
+		object-fit: cover;
+	}
+}
+@media(max-width:600px){
+	.reviews{
+		&__title {
+		margin-bottom: rem(15px);
+	}
+	}
+}

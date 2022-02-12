@@ -1,0 +1,241 @@
+// <Header>***************************************************************
+.header {
+	min-height: var(--headerHeight);
+	@media (max-width: $md2) {
+		--headerHeight: 100px;
+	}
+	@media (max-width: 879.98px) {
+		--headerHeight: 90px;
+	}
+	@media (max-width: 670px) {
+		--headerHeight: 55px;
+	}
+	padding: 10px 0;
+	&__wrapper {
+		position: fixed;
+		width: 100%;
+		top: 0;
+		z-index: 30;
+	}
+	&__inner {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		padding-top: 5px;
+		position: relative;
+	}
+	&__body {
+		display: flex;
+		align-items: center;
+		gap: rem(150px);
+		margin-left: auto;
+	}
+	&.scroll {
+		.header__wrapper {
+			background-color: #fff;
+			box-shadow: 0px 2px 10px rgba($green, 0.9);
+		}
+	}
+}
+
+.logo {
+	position: relative;
+	z-index: 10;
+	flex: 0 0 316px;
+
+	@extend %flex-center;
+
+	&::before {
+		content: "";
+		position: absolute;
+		z-index: -1;
+		top: -130px;
+		left: 0;
+		width: 100%;
+		height: 316px;
+		border-radius: 50%;
+		background-color: $darkGreen;
+	}
+
+	&__img {
+		color: #fff;
+		font-size: rem(100px);
+	}
+}
+
+.menu {
+	padding-left: 20px;
+
+	&__link {
+		padding: rem(8px) 0;
+		color: $green;
+		&.active {
+			color: $orange;
+		}
+	}
+}
+
+.actions {
+	position: relative;
+	z-index: 10;
+	padding-right: 8px;
+	&__basket {
+		font-size: 40px;
+		color: $green;
+	}
+	&__amount {
+		position: absolute;
+		top: rem(-18px);
+		right: rem(-3px);
+		width: rem(24px);
+		height: rem(24px);
+		@extend %flex-center;
+		background-color: $red;
+		border-radius: 50%;
+		color: #fff;
+		font-size: rem(16px);
+	}
+}
+
+@media (any-hover: hover) {
+	.menu {
+		&__link {
+			transition: color 0.2s linear;
+			&:hover {
+				color: $orange;
+			}
+		}
+	}
+}
+@media (min-width: 880px) {
+	.menu {
+		&__list {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-evenly;
+			align-items: center;
+			gap: 10px rem(80px);
+		}
+	}
+}
+
+@media (max-width: $md2) {
+	.header {
+		&__body {
+			gap: rem(90px);
+		}
+	}
+	.logo {
+		flex: 0 0 212px;
+		&::before {
+			top: -50px;
+			width: 100%;
+			height: 212px;
+		}
+	}
+	.menu {
+		&__list {
+			gap: 0 rem(64px);
+		}
+	}
+}
+@media (max-width: 1000px) {
+	.header {
+		&__body {
+			gap: rem(60px);
+		}
+	}
+	.logo {
+		flex: 0 0 180px;
+		&::before {
+			top: -60px;
+			width: 100%;
+			height: 180px;
+		}
+		&__img {
+			color: #fff;
+			font-size: rem(80px);
+		}
+	}
+	.menu {
+		&__list {
+			gap: 0 rem(44px);
+		}
+	}
+}
+@media (max-width: 879.98px) {
+	.header {
+		&__body {
+			gap: rem(20px);
+		}
+	}
+	.menu {
+		&__body {
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			overflow: auto;
+			top: 0;
+			left: -100%;
+			transition: left 0.3s ease 0s;
+			background-color: rgba($green, 0.9);
+			&::before {
+				content: "";
+				position: fixed;
+				top: 0;
+				left: -100%;
+				width: 100%;
+				height: var(--headerHeight);
+				transition: left 0.3s ease 0s;
+				z-index: 10;
+				background-color: #fff;
+			}
+			&.active {
+				left: 0;
+				&::before {
+					left: 0;
+				}
+			}
+		}
+		&__list {
+			margin-top: 150px;
+		}
+		&__item {
+			text-align: center;
+			margin-bottom: rem(50px);
+		}
+		&__link {
+			color: #fff;
+			font-size: rem(25px);
+		}
+	}
+	.actions {
+		&__basket {
+			font-size: 30px;
+		}
+	}
+}
+@media (max-width: 670px) {
+	.menu {
+		&__body {
+			&::before {
+				height: var(--headerHeight);
+			}
+		}
+		&__list {
+			margin-top: 110px;
+		}
+	}
+	.logo {
+		flex: 0 0 130px;
+		&__img {
+			font-size: rem(70px);
+		}
+		&::before {
+			height: 130px;
+			top: -53px;
+		}
+	}
+}
+
+// </Header>***************************************************************

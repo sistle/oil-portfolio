@@ -1,0 +1,27 @@
+%custom-scrollbar {
+	-webkit-overflow-scrolling: touch;
+	&::-webkit-scrollbar {
+		width: 9px;
+		height: 9px;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background: $green;
+		border-radius: 9px;
+		&:hover {
+			background-color: darken(#999, 15%);
+		}
+	}
+}
+
+%overflow-x {
+	overflow-x: auto;
+	overflow-y: hidden;
+	@extend %custom-scrollbar;
+}
+
+%overflow-y {
+	overflow-x: hidden;
+	overflow-y: auto;
+	@extend %custom-scrollbar;
+}
